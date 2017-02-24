@@ -4,9 +4,9 @@ package observer;
  * 关于一个主题的抽象类
  * @author 11456
  */
-public abstract class Subject{
+public abstract class PushSubject{
 
-  private List<Oberver> observerList;
+  private List<PushOberver> observerList;
   /**
    * [attach 注册一个对象到监视者中]
    * @param Oberver observer [description]
@@ -27,12 +27,12 @@ public abstract class Subject{
 
 /**
  * [notifyObservers 通知所有的注册对象中状态已经更新]
- * @param Observer observer [description]
+ * @param PushOberver observer [description]
  */
   public void notifyObservers(String newState){
     //将注册列表中的所有注册者通知更新状态
-    for (Oberver oberver:observerList){
-      observer.update();
+    for (PushOberver oberver:observerList){
+      observer.update(newState);
     }
   }
 }
