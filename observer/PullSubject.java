@@ -11,7 +11,7 @@ public abstract class PullSubject{
    * [attach 注册一个对象到监视者中]
    * @param PullOberver observer [description]
    */
-  protected void attach(Oberver observer){
+  protected synchronized void attach(Oberver observer){
     if(observerList==null){
       observerList=new ArrayList();
     }

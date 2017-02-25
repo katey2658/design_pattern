@@ -11,7 +11,7 @@ public abstract class PushSubject{
    * [attach 注册一个对象到监视者中]
    * @param Oberver observer [description]
    */
-  protected void attach(Oberver observer){
+  protected synchronized void attach(Oberver observer){
     if(observerList==null){
       observerList=new ArrayList();
     }
@@ -21,7 +21,7 @@ public abstract class PushSubject{
    * [detach 将观察者从列表中去除]
    * @param Observer oberver [description]
    */
-  protected void detach(Observer oberver){
+  protected synchronized void detach(Observer oberver){
     observerList.remove(oberver);
   }
 
