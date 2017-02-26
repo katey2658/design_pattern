@@ -27,7 +27,7 @@ public abstract class Handler{
    * @param  String request       [description]
    * @return        [description]
    */
-  public Handler getSuccessor(String request){
+  protected Handler getSuccessor(String request){
     return this.successor;
   }
 
