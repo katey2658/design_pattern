@@ -5,6 +5,9 @@ package proxy.dynamicproxy;
  */
 public class ReadSubject2{
 
+  /**
+   * @return [description]
+   */
   public whateverMethod(){
     //do something
   }
